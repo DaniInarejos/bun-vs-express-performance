@@ -104,5 +104,5 @@ Total: 16.6 MB
 
 ---
 
-Benchmarked with ❤️
+Benchmarked with ❤️ by @DaniInarejos
 

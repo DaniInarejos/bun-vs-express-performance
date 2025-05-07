@@ -66,3 +66,5 @@ See [benchmarks/RESULTS.md](benchmarks/RESULTS.md) for detailed stats.
 Bun shows promising performance gains for basic HTTP servers, especially in throughput and latency.
 This benchmark offers a simple yet informative comparison to help developers evaluate switching to Bun.
 
+Made with ❤️ by @DaniInarejos
+

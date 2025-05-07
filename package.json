@@ -1,0 +1,15 @@
+{
+  "name": "bun-vs-express-performance",
+  "version": "1.0.0",
+  "description": "A simple benchmark comparing the performance of [Bun](https://bun.sh) and [Express (Node.js)](https://expressjs.com) in a basic HTTP server scenario.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

@@ -16,6 +16,7 @@ bun-vs-express-performance/
 │ └── index.js # HTTP server using Express and Node.js
 ├── benchmarks/
 │ └── results.md # Raw results and analysis
+└── run-benchmarks.js
 └── README.md
 ```
 
@@ -26,47 +27,42 @@ bun-vs-express-performance/
 git clone https://github.com/DaniInarejos/bun-vs-express-performance.git
 cd bun-vs-express-performance
 ```
-### 2. Run the Bun server
-Make sure you have Bun installed.
-```bash
-cd bun-server
-bun run index.ts
-```
-This starts the Bun server at http://localhost:3000.
-
-
-### 3. Run the Express server
-Make sure you have Node.js and npm installed.
+### 2. Install dependencies
+Make sure you have:
+[Bun](https://bun.sh)
+[Node.js](https://nodejs.org/es)
+autocannon (if not installed):
 
 ```bash
-cd express-server
-npm install
-node index.js
-```
-This starts the Express server at http://localhost:3001.
-
-### 4. Benchmark with autocannon
-Install autocannon:
-
-```bash
-Copiar
 npm install -g autocannon
 ```
-Run benchmarks:
+in folder ./bun-vs-express-performance
 
 ```bash
-# Bun
-autocannon -d 10 -c 100 http://localhost:3000
-
-# Express
-autocannon -d 10 -c 100 http://localhost:3001
+npm install
 ```
-📊 Results
-See benchmarks/results.md for detailed stats.
 
-🧠 Conclusion
+###  3. Run the full benchmark with one command
+```bash
+node run-benchmarks.js
+```
+This will:
+
+Start both servers (Bun and Express)
+
+Run autocannon against each
+
+Output the results in the console
+
+Stop both servers automatically
+
+## 📊 Results- Visual Comparison
+See [benchmarks/RESULTS.md](benchmarks/RESULTS.md) for detailed stats.
+
+
+<img src="./benchmarks/bunvsexpress.jpg" alt="Bun vs Express Performance Chart" width="600"/>
+
+## 🧠 Conclusion
 Bun shows promising performance gains for basic HTTP servers, especially in throughput and latency.
 This benchmark offers a simple yet informative comparison to help developers evaluate switching to Bun.
-
-
 
